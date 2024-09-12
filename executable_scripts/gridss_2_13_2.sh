@@ -18,6 +18,8 @@ MAX_MEMORY=$9
 rm -rf $WORKING_DIR/gridss_2_13_2
 mkdir $WORKING_DIR/gridss_2_13_2
 
+set -e
+
 JAVA_HEAP_SIZE=$MAX_MEMORY"G"
 
 gridss -r $FASTA_REF \

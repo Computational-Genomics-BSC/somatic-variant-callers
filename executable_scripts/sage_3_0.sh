@@ -17,6 +17,8 @@ MAX_MEMORY=$9
 
 mkdir $WORKING_DIR/sage_3_0
 
+set -e
+
 JAVA_OPTS="-Xms4G -Xmx"$MAX_MEMORY"G"
 
 # Get sample name from normal and tumor files
