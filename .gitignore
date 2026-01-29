@@ -10,6 +10,7 @@ required_extra_data/muse/37/dbSNP.gz.tbi
 required_extra_data/cgpcavemanwrapper/unmatched/unmatchedNormal.bed.gz
 required_extra_data/cgpcavemanwrapper/unmatched/unmatchedNormal.bed.gz.tbi
 required_extra_data/gridss2/37/repeats.fa.out.gz
+required_extra_data/gridss2/38/repeats.fa.out.gz
 required_extra_data/cgppindel/codingexon_regions.indel.bed.gz
 required_extra_data/cgppindel/codingexon_regions.indel.bed.gz.tbi
 required_extra_data/cgppindel/genomicRules.lst
