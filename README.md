@@ -1,8 +1,8 @@
-# ONCOLINER - Variant callers<!-- omit in toc -->
+# Computational Genomics - Somatic variant callers<!-- omit in toc -->
 
 R. Martín et al., “ONCOLINER: A new solution for monitoring, improving, and harmonizing somatic variant calling across genomic oncology centers,” _Cell Genomics_, vol. 4, no. 9. Elsevier BV, p. 100639, Sep. 2024. [doi: 10.1016/j.xgen.2024.100639](https://doi.org/10.1016/j.xgen.2024.100639)
 
-This repository contains the scripts to run the variant callers used originally in ONCOLINER. The variant callers are executed from Bash scripts that use Singularity containers. The scripts are located in the [`executable_scripts/`](executable_scripts/) folder of this repository. The containers references are available in the [variant callers list](#variant-callers-list) below.
+This repository contains the scripts to run somatic variant callers (used originally in ONCOLINER). The variant callers are executed from Bash scripts that use Singularity containers. The scripts are located in the [`executable_scripts/`](executable_scripts/) folder of this repository. The containers references are available in the [variant callers list](#variant-callers-list) below.
 
 The scripts for running the variant callers are Bash scripts that can be executed directly from the command line in almost any Unix-based system. The only dependency is Singularity ([`singularity-ce`](https://sylabs.io/singularity/) version +3.9.0). The scripts are optimized for running in HPC environments without root privileges.
 
