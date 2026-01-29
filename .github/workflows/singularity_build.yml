@@ -62,7 +62,7 @@ jobs:
             # Check if container exists
             base64token=$(echo ${{ secrets.GITHUB_TOKEN }} | base64)
             echo "Checking if container $basename:$tag already exists"
-            if curl -s -H "Authorization: Bearer $base64token" https://ghcr.io/v2/${{ github.repository_owner }}/oncoliner_${basename}/tags/list | grep $tag; then
+            if curl -s -H "Authorization: Bearer $base64token" https://ghcr.io/v2/${{ github.repository_owner }}/bsc_cg_${basename}/tags/list | grep $tag; then
                 echo "Container $basename:$tag already exists, skipping build"
                 continue
             fi
@@ -70,7 +70,7 @@ jobs:
             # Build container
             sudo -E singularity build $basename.sif $recipe
             # Push container and name by tag
-            url="oras://ghcr.io/${{ github.repository_owner }}/oncoliner_${basename}:${tag}"
+            url="oras://ghcr.io/${{ github.repository_owner }}/bsc_cg_${basename}:${tag}"
             echo "Pushing container to $url"
             singularity push $basename.sif $url
             rm $basename.sif
@@ -90,7 +90,7 @@ jobs:
             # Check if container exists
             base64token=$(echo ${{ secrets.GITHUB_TOKEN }} | base64)
             echo "Checking if container $basename:$tag already exists"
-            if curl -s -H "Authorization: Bearer $base64token" https://ghcr.io/v2/${{ github.repository_owner }}/oncoliner_${basename}/tags/list | grep $tag; then
+            if curl -s -H "Authorization: Bearer $base64token" https://ghcr.io/v2/${{ github.repository_owner }}/bsc_cg_${basename}/tags/list | grep $tag; then
                 echo "Container $basename:$tag already exists, skipping build"
                 continue
             fi
@@ -100,7 +100,7 @@ jobs:
             # Download container
             sudo -E singularity pull $basename.sif docker://$url
             # Push container and name by tag
-            url="oras://ghcr.io/${{ github.repository_owner }}/oncoliner_${basename}:${tag}"
+            url="oras://ghcr.io/${{ github.repository_owner }}/bsc_cg_${basename}:${tag}"
             echo "Pushing container to $url"
             singularity push $basename.sif $url
             rm $basename.sif
